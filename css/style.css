@@ -1,0 +1,76 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Poppins globally */
+body, h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* Carousel image */
+.carousel-img {
+  height: 60vh;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.carousel-caption h2,
+.carousel-caption p {
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+footer {
+  background-color: #212529;
+}
+
+/* ----- Primary Color Overrides ----- */
+:root {
+  --bs-primary: #222831;
+  --bs-primary-hover: #1b2229;
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--bs-primary-hover);
+  border-color: var(--bs-primary-hover);
+  color: #fff !important;
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary-hover);
+  color: #fff !important;
+}
+
+/* Navbar hover */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--bs-primary);
+}
+
+/* Navbar toggler icon (dark) */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23222831' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Carousel arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}

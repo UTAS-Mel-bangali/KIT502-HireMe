@@ -1,0 +1,106 @@
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content needs-validation" novalidate>
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register to HireMe</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="userType" class="form-label">User Type *</label>
+          <select class="form-select" id="userType" required>
+            <option value="" disabled selected>Select user type</option>
+            <option value="student">Student</option>
+            <option value="recruiter">Recruiter</option>
+            <option value="placementOfficer">Placement Officer</option>
+          </select>
+          <div class="invalid-feedback">Please select a user type</div>
+        </div>
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name *</label>
+          <input type="text" class="form-control" id="fullName" required pattern="^[A-Za-z\s]{2,50}$">
+          <div class="invalid-feedback">Full name is required (2-50 characters, letters and spaces only)</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="invalid-feedback">Valid email is required</div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password *</label>
+          <input type="password" class="form-control" id="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%]).{8,}$">
+          <div class="invalid-feedback">
+            Minimum 8 chars, 1 uppercase, 1 number, 1 special (@#$%)
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label">Confirm Password *</label>
+          <input type="password" class="form-control" id="confirmPassword" required>
+          <div class="invalid-feedback">Passwords must match</div>
+        </div>
+        <!-- Student-specific fields -->
+        <div id="studentFields" class="student-fields" style="display: none;">
+          <div class="mb-3">
+            <label for="course" class="form-label">Course *</label>
+            <select class="form-select" id="course">
+              <option value="" disabled selected>Select course</option>
+              <option value="business">Business</option>
+              <option value="ict">ICT</option>
+              <option value="engineering">Engineering</option>
+              <option value="health">Health</option>
+              <option value="education">Education</option>
+            </select>
+            <div class="invalid-feedback">Please select a course</div>
+          </div>
+          <div class="mb-3">
+            <label for="yearLevel" class="form-label">Year Level *</label>
+            <select class="form-select" id="yearLevel">
+              <option value="" disabled selected>Select year level or graduate status</option>
+              <option value="first">First Year</option>
+              <option value="second">Second Year</option>
+              <option value="third">Third Year</option>
+              <option value="bachelor">Bachelor's Complete</option>
+              <option value="master">Master's Complete</option>
+            </select>
+            <div class="invalid-feedback">Please select a year level or graduate status</div>
+          </div>
+          <div class="mb-3">
+            <label for="resume" class="form-label">Resume (Optional)</label>
+            <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx">
+            <div class="form-text">PDF, DOC, or DOCX files only. Required when applying for jobs.</div>
+          </div>
+        </div>
+        <!-- Recruiter-specific fields -->
+        <div id="recruiterFields" class="recruiter-fields" style="display: none;">
+          <div class="mb-3">
+            <label for="companyName" class="form-label">Company Name *</label>
+            <input type="text" class="form-control" id="companyName" pattern="^[A-Za-z0-9\s]{2,100}$">
+            <div class="invalid-feedback">Company name is required (2-100 characters, letters, numbers, and spaces only)</div>
+          </div>
+          <div class="mb-3">
+            <label for="industryType" class="form-label">Industry Type *</label>
+            <select class="form-select" id="industryType">
+              <option value="" disabled selected>Select industry type</option>
+              <option value="it">IT</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="education">Education</option>
+              <option value="manufacturing">Manufacturing</option>
+            </select>
+            <div class="invalid-feedback">Please select an industry type</div>
+          </div>
+          <div class="mb-3">
+            <label for="companyLocation" class="form-label">Company Location *</label>
+            <input type="text" class="form-control" id="companyLocation" pattern="^[A-Za-z\s,]{2,100}$">
+            <div class="invalid-feedback">Company location is required (2-100 characters, letters, spaces, and commas only)</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="./js/registration.js"></script>
