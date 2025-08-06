@@ -18,74 +18,76 @@
 
     <!-- Filter Section -->
     <form class="row mb-4">
-      <div class="col-md-6">
-        <label for="jobType" class="form-label">Filter by Job Type</label>
-        <select id="jobType" class="form-select" disabled>
-          <option selected>All</option>
-          <option>Casual</option>
-          <option>Part-Time</option>
-          <option>Full-Time</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label for="industry" class="form-label">Filter by Industry</label>
-        <select id="industry" class="form-select" disabled>
-          <option selected>All</option>
-          <option>Business</option>
-          <option>IT</option>
-          <option>Finance</option>
-        </select>
-      </div>
-    </form>
+        <div class="col-md-6">
+          <label for="jobType" class="form-label">Filter by Type</label>
+          <select id="jobType" class="form-select">
+            <option value="All">All</option>
+            <option value="Casual">Casual</option>
+            <option value="Part-Time">Part-Time</option>
+            <option value="Full-Time">Full-Time</option>
+          </select>
+        </div>
+      
+        <div class="col-md-6">
+          <label for="industry" class="form-label">Filter by Industry</label>
+          <select id="industry" class="form-select">
+            <option value="All">All</option>
+            <option value="IT">IT</option>
+            <option value="Business">Business</option>
+            <option value="Marketing">Marketing</option>
+          </select>
+        </div>
+      </form>
+      
 
     <!-- Job Cards -->
     <div class="row">
 
-      <!-- Job 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Job_1</h5>
-            <p><strong>Company:</strong> Company_1</p>
-            <p><strong>Type:</strong> Full-Time</p>
-            <p><strong>Industry:</strong> IT</p>
-            <a href="job-details.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Job_2</h5>
-            <p><strong>Company:</strong> Company_2</p>
-            <p><strong>Type:</strong> Part-Time</p>
-            <p><strong>Industry:</strong> Business</p>
-            <a href="job-details.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Job_3</h5>
-            <p><strong>Company:</strong> Company_3</p>
-            <p><strong>Type:</strong> Casual</p>
-            <p><strong>Industry:</strong> Marketing</p>
-            <a href="job-details.html" class="btn btn-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Job 4 -->
-<div class="col-md-4 mb-4">
+     <!-- Job 1 -->
+<div class="col-md-4 mb-4 job-card" data-type="Full-Time" data-industry="IT">
     <div class="card h-100 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">Job_4</h5>
-        <p><strong>Company:</strong> Company_4</p>
+        <h5 class="card-title">Software Developer</h5>
+        <p><strong>Company:</strong> CodeCrafters</p>
+        <p><strong>Type:</strong> Full-Time</p>
+        <p><strong>Industry:</strong> IT</p>
+        <a href="job-details.html" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Job 2 -->
+  <div class="col-md-4 mb-4 job-card" data-type="Part-Time" data-industry="Business">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Marketing Assistant</h5>
+        <p><strong>Company:</strong> BizWorld</p>
+        <p><strong>Type:</strong> Part-Time</p>
+        <p><strong>Industry:</strong> Business</p>
+        <a href="job-details.html" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Job 3 -->
+  <div class="col-md-4 mb-4 job-card" data-type="Casual" data-industry="Finance">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Accounts Intern</h5>
+        <p><strong>Company:</strong> FinCorp</p>
+        <p><strong>Type:</strong> Casual</p>
+        <p><strong>Industry:</strong> Finance</p>
+        <a href="job-details.html" class="btn btn-primary">View Details</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Job 4 -->
+  <div class="col-md-4 mb-4 job-card" data-type="Part-Time" data-industry="Marketing">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title">Graphic Designer</h5>
+        <p><strong>Company:</strong> Creativo Studio</p>
         <p><strong>Type:</strong> Part-Time</p>
         <p><strong>Industry:</strong> Marketing</p>
         <a href="job-details.html" class="btn btn-primary">View Details</a>
@@ -94,11 +96,11 @@
   </div>
   
   <!-- Job 5 -->
-  <div class="col-md-4 mb-4">
+  <div class="col-md-4 mb-4 job-card" data-type="Casual" data-industry="IT">
     <div class="card h-100 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">Job_5</h5>
-        <p><strong>Company:</strong> Company_5</p>
+        <h5 class="card-title">Data Analyst Intern</h5>
+        <p><strong>Company:</strong> Insight Analytics</p>
         <p><strong>Type:</strong> Casual</p>
         <p><strong>Industry:</strong> IT</p>
         <a href="job-details.html" class="btn btn-primary">View Details</a>
@@ -107,18 +109,18 @@
   </div>
   
   <!-- Job 6 -->
-  <div class="col-md-4 mb-4">
+  <div class="col-md-4 mb-4 job-card" data-type="Full-Time" data-industry="Finance">
     <div class="card h-100 shadow-sm">
       <div class="card-body">
-        <h5 class="card-title">Job_6</h5>
-        <p><strong>Company:</strong> Company_6</p>
+        <h5 class="card-title">Finance Assistant</h5>
+        <p><strong>Company:</strong> WealthWise</p>
         <p><strong>Type:</strong> Full-Time</p>
-        <p><strong>Industry:</strong> Business</p>
+        <p><strong>Industry:</strong> Finance</p>
         <a href="job-details.html" class="btn btn-primary">View Details</a>
       </div>
     </div>
   </div>
-
+  
     </div>
   </div>
 
