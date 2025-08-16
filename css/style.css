@@ -6,7 +6,16 @@
 }
 
 /* Poppins globally */
-body, h1, h2, h3, h4, h5, h6, p, a, button {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
   font-family: 'Poppins', sans-serif !important;
 }
 
@@ -130,4 +139,17 @@ form .form-label {
   .job-card .card {
     margin-bottom: 1rem;
   }
+
+/* application container */
+#application-container {
+  min-height: 100vh;
+}
+
+.status-badge {
+  font-size: 0.85rem;
+}
+
+#typeFilter, #statusFilter, #jobFilter{
+  cursor: pointer;
+}
 }

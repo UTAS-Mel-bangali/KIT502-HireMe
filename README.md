@@ -18,7 +18,7 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 ├── css/
 │   └── styles.css            # Optional custom styles
 └── js/
-    └── main.js               # Loads navbar and registration modals dynamically
+    └── navbar.js               # Loads navbar and registration modals dynamically
 ```
 
 ---
