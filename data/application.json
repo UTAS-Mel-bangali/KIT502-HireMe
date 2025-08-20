@@ -1,0 +1,72 @@
+[
+  {
+    "name": "John Smith",
+    "email": "john@example.com",
+    "phone": "0400 123 456",
+    "job": "IT Support",
+    "type": "Full-time",
+    "date": "2025-08-01",
+    "status": "Pending",
+    "cv": "#"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "phone": "0401 987 654",
+    "job": "Cleaner",
+    "type": "Casual",
+    "date": "2025-08-03",
+    "status": "Reviewed",
+    "cv": "#"
+  },
+  {
+    "name": "Michael Lee",
+    "email": "michael@example.com",
+    "phone": "0402 555 111",
+    "job": "Receptionist",
+    "type": "Part-time",
+    "date": "2025-08-05",
+    "status": "Rejected",
+    "cv": "#"
+  },
+  {
+    "name": "Emily Johnson",
+    "email": "emily@example.com",
+    "phone": "0403 222 333",
+    "job": "Sales Assistant",
+    "type": "Casual",
+    "date": "2025-08-06",
+    "status": "Pending",
+    "cv": "#"
+  },
+  {
+    "name": "David Brown",
+    "email": "david@example.com",
+    "phone": "0404 444 555",
+    "job": "Warehouse Worker",
+    "type": "Full-time",
+    "date": "2025-08-07",
+    "status": "Reviewed",
+    "cv": "#"
+  },
+  {
+    "name": "Sophia Wilson",
+    "email": "sophia@example.com",
+    "phone": "0405 666 777",
+    "job": "Customer Service",
+    "type": "Part-time",
+    "date": "2025-08-08",
+    "status": "Pending",
+    "cv": "#"
+  },
+  {
+    "name": "Liam Martin",
+    "email": "liam@example.com",
+    "phone": "0406 888 999",
+    "job": "Delivery Driver",
+    "type": "Casual",
+    "date": "2025-08-09",
+    "status": "Rejected",
+    "cv": "#"
+  }
+]
