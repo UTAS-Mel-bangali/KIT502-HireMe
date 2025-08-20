@@ -16,9 +16,27 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 │   └── images/
 │       └── logo.png
 ├── css/
-│   └── styles.css            # Optional custom styles
-└── js/
-    └── navbar.js               # Loads navbar and registration modals dynamically
+│   └── style.css               # Custom styles and Bootstrap overrides
+├── js/
+│   ├── navbar.js               # Loads navbar, registration, and login modals dynamically
+│   ├── registration.js         # Registration form logic and validation
+│   ├── login.js                # Login form logic and validation
+│   ├── job_listing.js          # Loads and filters job listings
+│   ├── job_details.js          # Loads job details dynamically
+│   ├── manage_jobs.js          # Manage jobs dashboard logic
+│   └── application_filter.js   # Filtering logic for applications
+└── data/
+    ├── jobs.json               # Sample job data for job listing and manage jobs
+    └── application.json        # Sample application data for view all applications
+---
+
+### 🗃️ Sample Data Files
+
+- `data/jobs.json`: Contains an array of job objects, each with fields like `id`, `title`, `company`, `type`, `industry`, `description`, `link`, `status`, `created`, and `salary`. Used by job listing, job details, and manage jobs features for demo and filtering.
+
+- `data/application.json`: Contains an array of application objects, each with fields like `name`, `email`, `phone`, `job`, `type`, `date`, `status`, and `cv`. Used by the view all applications page for demo and filtering.
+
+These files allow the frontend to demonstrate full functionality (listing, filtering, managing, and viewing applications) without a backend.
 ```
 
 ---
@@ -76,10 +94,22 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 
 ---
 
+
+### 🎨 CSS & Theming
+
+- All custom styles and Bootstrap overrides are in `css/style.css`.
+- The primary color theme is set using CSS variables (e.g., `--bs-primary`), ensuring consistent button and UI coloring.
+- Buttons, forms, and cards use custom transitions, hover effects, and spacing for a modern look.
+- Responsive design is achieved with media queries for mobile-friendly layouts.
+- Custom classes (e.g., `.job-card`, `.status-badge`) are used for job listings and application tables.
+- Bootstrap classes are extended for a unique but familiar user experience.
+
+---
+
 ### 💡 How It Works
 
 - `index.html` contains the homepage and placeholder `<div id="navbar-placeholder"></div>`
-- On page load, `main.js` loads `navbar.html` and `register.html` and injects them into the page
+- On page load, `navbar.js` loads `navbar.html` and `register.html` and injects them into the page
 - Clicking "Register" or "Login" opens Bootstrap modals with validations
 
 ---
