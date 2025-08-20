@@ -1,11 +1,12 @@
 ![Hire Me Logo](logo_preview.png)
-# HireMe Job Portal (Frontend UI) - KIT502 - Assignment 1
 
-This project is a modular front-end user interface for the **HireMe** job platform, built for **KIT502 Assignment 1**.
+# 💼 HireMe Job Portal (Frontend UI) – KIT502 Assignment 1
+
+This project is a **modular front-end user interface** for the **HireMe job platform**, developed as part of **KIT502 – Assignment 1**.
 
 ---
 
-### 📁 Project Structure
+## 📂 Project Structure
 
 ```
 /project-root
@@ -16,115 +17,111 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 ├── login.html                  # Login modal
 ├── job_listing.html            # Job listings with filter UI
 ├── job_details.html            # Job details page (dynamic)
-├── manage_job.html             # Manage jobs dashboard (for recruiters/admin)
-├── view_all_application.html   # View all job applications (with filters)
+├── manage_job.html             # Recruiter/admin job management dashboard
+├── view_all_application.html   # Application view with filters
+│
 ├── assets/
 │   └── images/
 │       ├── logo.png
 │       ├── dev-job.png
 │       ├── designer-job.png
 │       └── marketing-job.png
+│
 ├── css/
 │   └── style.css               # Custom styles and Bootstrap overrides
+│
 ├── js/
-│   ├── navbar.js               # Loads navbar, registration, and login modals dynamically
-│   ├── registration.js         # Registration form logic and validation
-│   ├── login.js                # Login form logic and validation
-│   ├── job_listing.js          # Loads and filters job listings
+│   ├── navbar.js               # Loads navbar, registration & login modals
+│   ├── registration.js         # Registration logic & validation
+│   ├── login.js                # Login validation
+│   ├── job_listing.js          # Job listings and filtering logic
 │   ├── job_details.js          # Loads job details dynamically
-│   ├── manage_jobs.js          # Manage jobs dashboard logic
-│   └── application_filter.js   # Filtering logic for applications
+│   ├── manage_jobs.js          # Job management logic
+│   └── application_filter.js   # Application filtering logic
+│
 └── data/
-    ├── jobs.json               # Sample job data for job listing and manage jobs
-    └── application.json        # Sample application data for view all applications
-```
-
-### 🗃️ Sample Data Files
-
-- `data/jobs.json`: Contains an array of job objects, each with fields like `id`, `title`, `company`, `type`, `industry`, `description`, `link`, `status`, `created`, and `salary`. Used by job listing, job details, and manage jobs features for demo and filtering.
-
-- `data/application.json`: Contains an array of application objects, each with fields like `name`, `email`, `phone`, `job`, `type`, `date`, `status`, and `cv`. Used by the view all applications page for demo and filtering.
-
-These files allow the frontend to demonstrate full functionality (listing, filtering, managing, and viewing applications) without a backend.
+    ├── jobs.json               # Sample job data (listing, details, manage jobs)
+    └── application.json        # Sample application data (view & filter)
 ```
 
 ---
 
-### 🎯 Features Implemented
+## 🗃️ Sample Data Files
 
-#### ✅ Modular UI Components
-- Navbar and Registration Modals separated into HTML files
-- Loaded via JavaScript using `fetch()`
+* **`data/jobs.json`**
+  Contains an array of job objects with fields like:
+  `id`, `title`, `company`, `type`, `industry`, `description`, `link`, `status`, `created`, and `salary`.
+  → Used by job listing, job details, and manage jobs features.
 
-#### 🔐 Login & Registration Modals
-- Modal-based forms using Bootstrap 5
-- Placeholder validation to ensure no empty fields
-- Login modal with basic email/password validation
-- Role-based dynamic registration
-
----
-
-### 👥 User Roles & Registration Fields
-
-#### 🔹 Students
-- Full Name
-- Email
-- Password (validated)
-- Course (e.g., ICT, Business)
-- Year Level (First, Second, Third Year)
-- Resume Upload (optional for now)
-
-#### 🔹 Recruiters
-- Full Name
-- Email Address
-- Company Name
-- Industry Type (e.g., IT, Finance)
-- Company Location
-- Password (validated)
-
-#### 🔹 Placement Officers (Admin)
-- Can register/login
-- Additional features will be added in later stages
+* **`data/application.json`**
+  Contains application objects with fields:
+  `name`, `email`, `phone`, `job`, `type`, `date`, `status`, and `cv`.
+  → Used by the application view and filtering feature.
 
 ---
 
-### 🛡️ Validations
+## 🎯 Key Features
 
-#### Password Requirements:
-- Minimum 8 characters  
-- At least one uppercase letter  
-- At least one number  
-- At least one special character (`@`, `#`, `$`, `%`)
+### ✅ Modular UI Components
 
-#### Form Validations:
-- All required fields must be filled
-- Passwords must match
-- Fields are validated in-browser via JavaScript
+* Navbar & registration modals in separate HTML files
+* Loaded dynamically using `fetch()`
 
----
+### 🔐 Login & Registration
 
+* Bootstrap modal-based forms
+* Placeholder validation for empty fields
+* Role-based registration (student, recruiter, placement officer)
 
-### 🎨 CSS & Theming
+### 👥 User Roles
 
-- All custom styles and Bootstrap overrides are in `css/style.css`.
-- The primary color theme is set using CSS variables (e.g., `--bs-primary`), ensuring consistent button and UI coloring.
-- Buttons, forms, and cards use custom transitions, hover effects, and spacing for a modern look.
-- Responsive design is achieved with media queries for mobile-friendly layouts.
-- Custom classes (e.g., `.job-card`, `.status-badge`) are used for job listings and application tables.
-- Bootstrap classes are extended for a unique but familiar user experience.
+* **Students** → Register with name, email, course, year level, password, resume (optional)
+* **Recruiters** → Register with name, email, company details, industry, location, password
+* **Placement Officers (Admin)** → Can register/login (extra features planned)
 
 ---
 
-### 💡 How It Works
+## 🛡️ Validations
 
-- `index.html` contains the homepage and placeholder `<div id="navbar-placeholder"></div>`
-- On page load, `navbar.js` loads `navbar.html` and `register.html` and injects them into the page
-- Clicking "Register" or "Login" opens Bootstrap modals with validations
+**Password Requirements:**
+
+* ≥ 8 characters
+* At least **1 uppercase letter**
+* At least **1 number**
+* At least **1 special character** (`@`, `#`, `$`, `%`)
+
+**Form Validations:**
+
+* Required fields must be filled
+* Passwords must match
+* Client-side validation with JavaScript
 
 ---
 
-### 📌 Notes
+## 🎨 CSS & Theming
 
-- No backend/database integration included
-- Resume is optional now, but required later when applying for jobs
-- All users must register before interacting with the platform
+* Custom styles & Bootstrap overrides in `css/style.css`
+* Theme managed with CSS variables (e.g., `--bs-primary`)
+* Consistent button, card, and form design with hover/transition effects
+* Responsive design with media queries
+* Custom classes like `.job-card` and `.status-badge`
+
+---
+
+## 💡 How It Works
+
+1. `index.html` includes a placeholder `<div id="navbar-placeholder"></div>`
+2. `navbar.js` injects `navbar.html` and `registration.html` dynamically
+3. Clicking **Register** or **Login** opens modal forms with validations
+
+---
+
+## 📌 Notes
+
+* No backend/database integration (front-end only)
+* Resume upload is optional (will be required in job applications later)
+* All users must register before accessing the platform
+
+---
+
+✨ This project demonstrates **front-end modular development, role-based registration, UI validation, and responsive design** for a job portal system.
