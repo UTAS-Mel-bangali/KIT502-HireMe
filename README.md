@@ -9,12 +9,20 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 ```
 /project-root
 │
-├── index.html
-├── navbar.html               # Separated Bootstrap navbar (modal-based)
-├── register.html             # Registration modal, role-based fields
+├── index.html                  # Homepage with carousel and dynamic placeholders
+├── navbar.html                 # Bootstrap navbar (modal-based, loaded dynamically)
+├── registration.html           # Registration modal, role-based fields
+├── login.html                  # Login modal
+├── job_listing.html            # Job listings with filter UI
+├── job_details.html            # Job details page (dynamic)
+├── manage_job.html             # Manage jobs dashboard (for recruiters/admin)
+├── view_all_application.html   # View all job applications (with filters)
 ├── assets/
 │   └── images/
-│       └── logo.png
+│       ├── logo.png
+│       ├── dev-job.png
+│       ├── designer-job.png
+│       └── marketing-job.png
 ├── css/
 │   └── style.css               # Custom styles and Bootstrap overrides
 ├── js/
@@ -28,7 +36,7 @@ This project is a modular front-end user interface for the **HireMe** job platfo
 └── data/
     ├── jobs.json               # Sample job data for job listing and manage jobs
     └── application.json        # Sample application data for view all applications
----
+```
 
 ### 🗃️ Sample Data Files
 
