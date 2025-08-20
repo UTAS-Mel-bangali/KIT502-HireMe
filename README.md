@@ -1,3 +1,4 @@
+![Hire Me Logo](logo_preview.png)
 # HireMe Job Portal (Frontend UI) - KIT502 - Assignment 1
 
 This project is a modular front-end user interface for the **HireMe** job platform, built for **KIT502 Assignment 1**.
